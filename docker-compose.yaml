@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  web:
+    image: hugo:${HUGO_VERSION}
+    container_name: web
+    build: 
+      context: .
+      args: 
+        hugo_version: ${HUGO_VERSION}
+    command: hugo server --watch=true --bind 0.0.0.0
+    ports:
+      - 1313:1313
+    volumes:
+      - ./my_site:/web
