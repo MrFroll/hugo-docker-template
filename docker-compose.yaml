@@ -7,7 +7,9 @@ services:
       context: .
       args: 
         hugo_version: ${HUGO_VERSION}
-    command: hugo server --watch=true --bind 0.0.0.0
+        uid: ${UID}
+        gid: ${GID}
+    command: hugo server -D --watch=true --bind 0.0.0.0
     ports:
       - 1313:1313
     volumes:
