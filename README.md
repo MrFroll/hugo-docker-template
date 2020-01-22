@@ -10,9 +10,11 @@ Let's assume that you have GitHub account **my_account** and you are planning to
 
 You need to modify *.env* file. Please edit following info.
 
-> HUGO_VERSION=0.62.2
-> UID=1000
-> GID=1000
+```bash
+HUGO_VERSION=0.62.2
+UID=1000
+GID=1000
+```
 
 Here replace HUGO_VERSION with a preferred Hugo version. And if you are Linux user please replace UID and GID values with your user id and group id. You can find you user/group id in terminal
 
@@ -95,6 +97,6 @@ Here is my favorite way to work with Hugo and [Hugo Academic](https://sourcethem
 8. and run docker-compose
    
    ```bash
-   $ docker-compose up -D
+   $ docker-compose up -d
    ```
 9. if everything is ok just try in your browser http://localhost:1313/posts/my-first-post/ and you will see your new site.
